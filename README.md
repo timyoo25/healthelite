@@ -1,4 +1,3 @@
-
 ## Overview
 
 HealthElite - A place for users to share their experiences and reviews of nutritional supplements that either helped or hindered
@@ -18,13 +17,12 @@ HealthElite - A place for users to share their experiences and reviews of nutrit
 
 ### Libraries and Dependencies
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | Component-based JS library for building user interfaces |
-|   React Router   | Navigational React components |
-| Axios | Promised-based HTTP client |
-|     Ruby on Rails      | Backend framework for creating a rest API |
-
+|    Library    | Description                                             |
+| :-----------: | :------------------------------------------------------ |
+|     React     | Component-based JS library for building user interfaces |
+| React Router  | Navigational React components                           |
+|     Axios     | Promised-based HTTP client                              |
+| Ruby on Rails | Backend framework for creating a rest API               |
 
 <br>
 
@@ -32,16 +30,17 @@ HealthElite - A place for users to share their experiences and reviews of nutrit
 
 #### Wireframes
 
-[Wireframes - Desktop](https://whimsical.com/layouts-Ducgjk8giFr6jR7gyiC3YH)
-[Wireframes - Mobile](https://whimsical.com/screens-mobile-JdNbzwZNaCV6H9QK8VR5sN)
+- [Wireframes - Desktop](https://whimsical.com/layouts-Ducgjk8giFr6jR7gyiC3YH)
+
+- [Wireframes - Mobile](https://whimsical.com/screens-mobile-JdNbzwZNaCV6H9QK8VR5sN)
 
 #### Component Tree
 
-[Component Tree](https://whimsical.com/component-hierarchy-bWXL2647ascLXjUjZYojH)
+- [Component Tree](https://whimsical.com/component-hierarchy-bWXL2647ascLXjUjZYojH)
 
 #### Component Architecture
 
-``` structure
+```structure
 
 src
 |__ components/
@@ -74,30 +73,30 @@ src
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Planning Wireframes - Desktop   |    H     |     3 hrs      |     2.5 hrs     |    2.5 hrs    |
-| Planning Wireframes - Mobile    |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
-| BE Create Folders/Files    |    H     |     .5 hrs      |      hrs     |     hrs    |
-| BE Create DB / Schema    |    H     |     1 hrs      |      hrs     |     hrs    |
-| BE User Auth    |    H     |     1 hrs      |      hrs     |     hrs    |
-| BE Route Set Up    |    H     |     .5 hrs      |      hrs     |     hrs    |
-| FE Create React Client    |    H     |     .5 hrs      |      hrs     |     hrs    |
-| FE API Call Set Up    |    H     |     2 hrs      |      hrs     |     hrs    |
-| FE Display Products on List    |    H     |     2 hrs      |      hrs     |     hrs    |
-| FE Display Product Details    |    H     |     2 hrs      |      hrs     |     hrs    |
-| FE Create Forms for Login/Register    |    H     |     3 hrs      |      hrs     |     hrs    |
-| FE User Authentication    |    H     |     3 hrs      |      hrs     |     hrs    |
-| FE Links/Routes Set Up    |    H     |     3 hrs      |      hrs     |     hrs    |
-| CSS Home Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-| CSS Product List Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-| CSS Product Create Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-| CSS Product Detail Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-| CSS Product Edit Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-| CSS Product - Reviews Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-| CSS Review Edit Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-| CSS Review Create Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-| TOTAL               |          |     48.5 hrs      |     3 hrs     |     TBD     |
+| Task                               | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Planning Wireframes - Desktop      |    H     |     3 hrs      |    2.5 hrs    |   2.5 hrs   |
+| Planning Wireframes - Mobile       |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| BE Create Folders/Files            |    H     |     .5 hrs     |      hrs      |     hrs     |
+| BE Create DB / Schema              |    H     |     1 hrs      |      hrs      |     hrs     |
+| BE User Auth                       |    H     |     1 hrs      |      hrs      |     hrs     |
+| BE Route Set Up                    |    H     |     .5 hrs     |      hrs      |     hrs     |
+| FE Create React Client             |    H     |     .5 hrs     |      hrs      |     hrs     |
+| FE API Call Set Up                 |    H     |     2 hrs      |      hrs      |     hrs     |
+| FE Display Products on List        |    H     |     2 hrs      |      hrs      |     hrs     |
+| FE Display Product Details         |    H     |     2 hrs      |      hrs      |     hrs     |
+| FE Create Forms for Login/Register |    H     |     3 hrs      |      hrs      |     hrs     |
+| FE User Authentication             |    H     |     3 hrs      |      hrs      |     hrs     |
+| FE Links/Routes Set Up             |    H     |     3 hrs      |      hrs      |     hrs     |
+| CSS Home Screen                    |    H     |     3 hrs      |      hrs      |     hrs     |
+| CSS Product List Screen            |    H     |     3 hrs      |      hrs      |     hrs     |
+| CSS Product Create Screen          |    H     |     3 hrs      |      hrs      |     hrs     |
+| CSS Product Detail Screen          |    H     |     3 hrs      |      hrs      |     hrs     |
+| CSS Product Edit Screen            |    H     |     3 hrs      |      hrs      |     hrs     |
+| CSS Product - Reviews Screen       |    H     |     3 hrs      |      hrs      |     hrs     |
+| CSS Review Edit Screen             |    H     |     3 hrs      |      hrs      |     hrs     |
+| CSS Review Create Screen           |    H     |     3 hrs      |      hrs      |     hrs     |
+| TOTAL                              |          |    48.5 hrs    |     3 hrs     |     TBD     |
 
 <br>
 
@@ -105,10 +104,10 @@ src
 
 #### ERD Model
 
-[ERD](https://imgur.com/OG0Jly1)
-<br>
+- [ERD](https://imgur.com/a/K75i8mW)
+  <br>
 
-***
+---
 
 ## Post-MVP
 
@@ -118,7 +117,7 @@ src
 - Create external link for users to post/edit products with a 'where to purchase'
 - Categorize each product into respective silo
 
-***
+---
 
 ## Code Showcase
 
