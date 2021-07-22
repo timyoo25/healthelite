@@ -30,13 +30,13 @@ HealthElite - A place for users to share their experiences and reviews of nutrit
 
 #### Wireframes
 
-- [Wireframes - Desktop](https://whimsical.com/layouts-Ducgjk8giFr6jR7gyiC3YH)
+- [Desktop](https://whimsical.com/layouts-Ducgjk8giFr6jR7gyiC3YH)
 
-- [Wireframes - Mobile](https://whimsical.com/screens-mobile-JdNbzwZNaCV6H9QK8VR5sN)
+- [Mobile](https://whimsical.com/screens-mobile-JdNbzwZNaCV6H9QK8VR5sN)
 
 #### Component Tree
 
-- [Component Tree](https://whimsical.com/component-hierarchy-bWXL2647ascLXjUjZYojH)
+- [HealthElite Component Tree](https://whimsical.com/component-hierarchy-bWXL2647ascLXjUjZYojH)
 
 #### Component Architecture
 
