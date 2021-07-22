@@ -1,7 +1,7 @@
 
 ## Overview
 
-**HealthElite** 
+HealthElite - A place for users to share their experiences and reviews of nutritional supplements that either helped or hindered
 
 ## MVP
 
