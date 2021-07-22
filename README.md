@@ -11,25 +11,20 @@
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Create an intuitive application that is understandable for all users
+- Demonstrate understanding of full CRUD capabilities
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Component-based JS library for building user interfaces |
+|   React Router   | Navigational React components |
+| Axios | Promised-based HTTP client |
+|     Ruby on Rails      | Backend framework for creating a rest API |
+
 
 <br>
 
@@ -65,7 +60,6 @@ src
       |__ Reviews.jsx
       |__ ReviewEdit.jsx
       |__ ReviewCreate.jsx
-      |__ ReviewDetail.jsx
 |__ services/
       |__ api-config.js
       |__ products.js
@@ -82,8 +76,28 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Planning Wireframes - Desktop   |    H     |     3 hrs      |     2.5 hrs     |    2.5 hrs    |
+| Planning Wireframes - Mobile    |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| BE Create Folders/Files    |    H     |     .5 hrs      |      hrs     |     hrs    |
+| BE Create DB / Schema    |    H     |     1 hrs      |      hrs     |     hrs    |
+| BE User Auth    |    H     |     1 hrs      |      hrs     |     hrs    |
+| BE Route Set Up    |    H     |     .5 hrs      |      hrs     |     hrs    |
+| FE Create React Client    |    H     |     .5 hrs      |      hrs     |     hrs    |
+| FE API Call Set Up    |    H     |     2 hrs      |      hrs     |     hrs    |
+| FE Display Products on List    |    H     |     2 hrs      |      hrs     |     hrs    |
+| FE Display Product Details    |    H     |     2 hrs      |      hrs     |     hrs    |
+| FE Create Forms for Login/Register    |    H     |     3 hrs      |      hrs     |     hrs    |
+| FE User Authentication    |    H     |     3 hrs      |      hrs     |     hrs    |
+| FE Links/Routes Set Up    |    H     |     3 hrs      |      hrs     |     hrs    |
+| CSS Home Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
+| CSS Product List Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
+| CSS Product Create Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
+| CSS Product Detail Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
+| CSS Product Edit Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
+| CSS Product - Reviews Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
+| CSS Review Edit Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
+| CSS Review Create Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
+
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
 <br>
@@ -99,7 +113,11 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Create a 'My Submissions' screen for user to see their own products/reviews submissions
+- Create modal on mobile to navigate different categories
+- Develop query to calculate average star (1-5) rating on each product
+- Create external link for users to post/edit products with a 'where to purchase'
+- Categorize each product into respective silo
 
 ***
 
