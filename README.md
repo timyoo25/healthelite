@@ -97,8 +97,7 @@ src
 | CSS Product - Reviews Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
 | CSS Review Edit Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
 | CSS Review Create Screen    |    H     |     3 hrs      |      hrs     |     hrs    |
-
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| TOTAL               |          |     48.5 hrs      |     3 hrs     |     TBD     |
 
 <br>
 
