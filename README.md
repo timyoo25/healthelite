@@ -44,7 +44,6 @@ HealthElite - A place for users to share their experiences and reviews of nutrit
 
 src
 |__ components/
-      |__ Card.jsx
       |__ Nav.jsx
 |__ layout/
       |__ Layout.jsx
@@ -52,6 +51,7 @@ src
       |__ Home.jsx
       |__ Login.jsx
       |__ Register.jsx
+      |__ Categories.jsx
       |__ Products.jsx
       |__ ProductDetail.jsx
       |__ ProductEdit.jsx
@@ -64,14 +64,12 @@ src
       |__ products.js
       |__ reviews.js
 |__ containers/
-      |__ PostContainer.jsx
+      |__ ProductContainer.jsx
       |__ ReviewContainer.jsx
 
 ```
 
 #### Time Estimates
-
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                               | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------- | :------: | :------------: | :-----------: | :---------: |
