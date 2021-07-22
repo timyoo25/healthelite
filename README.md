@@ -32,8 +32,8 @@
 
 #### Wireframes
 
-[Wireframes](https://whimsical.com/layouts-Ducgjk8giFr6jR7gyiC3YH)
-
+[Wireframes - Desktop](https://whimsical.com/layouts-Ducgjk8giFr6jR7gyiC3YH)
+[Wireframes - Mobile](https://whimsical.com/screens-mobile-JdNbzwZNaCV6H9QK8VR5sN)
 
 #### Component Tree
 
