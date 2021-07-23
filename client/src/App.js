@@ -6,6 +6,7 @@ import {
   removeToken,
   verifyUser,
 } from "./services/auth";
+import { getAllProducts } from "./services/products";
 
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
@@ -13,8 +14,10 @@ import Login from "./screens/Login/Login";
 import Register from "./screens/Register/Register";
 
 import "./App.css";
+import Home from "./screens/Home/Home";
 
 function App() {
+  const [productList, setProductList] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   // const history = useHistory();
 
@@ -23,7 +26,12 @@ function App() {
       const userData = await verifyUser();
       setCurrentUser(userData);
     };
+    const fetchProducts = async () => {
+      const productData = await getAllProducts();
+      setProductList(productData);
+    };
     handleVerify();
+    fetchProducts();
   }, []);
 
   const handleLogin = async (formData) => {
@@ -46,19 +54,23 @@ function App() {
 
   return (
     <div className="App">
-      <Layout currentUser={currentUser} handleLogout={handleLogout}>
+      <Layout
+        currentUser={currentUser}
+        handleLogout={handleLogout}
+        productList={productList}
+      >
         <Switch>
           <Route path="/login">
-            {/* <Login handleLogin={handleLogin} /> */}
-            <p>hello?</p>
+            <Login handleLogin={handleLogin} />
           </Route>
           <Route path="/register">
-            <h3>register</h3>
-            {/* <Register handleRegister={handleRegister} /> */}
+            <Register handleRegister={handleRegister} />
           </Route>
-          <Route path="/">
-            <h3>container</h3>
-            {/* <MainContainer /> */}
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route paht="/products">
+            <MainContainer />
           </Route>
         </Switch>
       </Layout>

@@ -1,12 +1,12 @@
 import api from "./api-config";
 
 export const getAllProducts = async () => {
-  const res = await api.get("/products");
+  const res = await api.get(`/products`);
   return res.data;
 };
 
 export const getOneProduct = async (id) => {
-  const res = await api.get(`/products${id}`);
+  const res = await api.get(`/products/${id}`);
   return res.data;
 };
 
@@ -24,7 +24,9 @@ export const deleteProduct = async (id) => {
   await api.delete(`/products/${id}`);
 };
 
-export const addCategory = async (categoryId, productId) => {
-  const res = await api.put(`/categories/${categoryId}/products/${productId}`);
+export const addCategory = async (category_id, product_id) => {
+  const res = await api.put(
+    `/categories/${category_id}/products/${product_id}`
+  );
   return res.data;
 };

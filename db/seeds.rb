@@ -23,15 +23,15 @@ puts "#{User.count} user(s) created"
 
 puts "#{Category.count} categories created"
 
-@gold_standard_protein = Product.create!(name: "Optimum Nutrition Gold Standard Whey", description: "Extreme Milk Chocolate - 24g protein, 5.5g BCAAs, 1g Total Fat, 1g Total Sugars / Serving", user: @admin, category: @protein)
+@gold_standard_protein = Product.create!(name: "Optimum Nutrition Gold Standard Whey", description: "Extreme Milk Chocolate - 24g protein, 5.5g BCAAs, 1g Total Fat, 1g Total Sugars / Serving", user: @admin, category: @protein, img_url: "https://content.optimumnutrition.com/i/on/gold-standard-100-whey-protein_Image_01?layer0=$PDP$")
 
-@gold_standard_preworkout = Product.create!(name: "Optimum Nutrition Pre-Workout", description: "Blue-Razz", user: @admin, category: @pre_workout)
+@gold_standard_preworkout = Product.create!(name: "Optimum Nutrition Pre-Workout", description: "Blue-Razz", user: @admin, category: @pre_workout, img_url: "https://m.media-amazon.com/images/I/71auZO+BmwL._AC_SL1500_.jpg")
 
-@animal_pak = Product.create!(name: "Animal Pak", description: "Ultimate Multi-Vitamin", user: @admin2, category: @vitamin)
+@animal_pak = Product.create!(name: "Animal Pak", description: "Ultimate Multi-Vitamin", user: @admin2, category: @vitamin, img_url: "https://m.media-amazon.com/images/I/71qk9nk2nAS._AC_SL1500_.jpg")
 
-@x_tend = Product.create!(name: "X-Tend BCAA", description: " Blue-Razz, 7g BCAAs / Serving", user: @admin2, category: @amino_acid)
+@x_tend = Product.create!(name: "X-Tend BCAA", description: " Blue-Razz, 7g BCAAs / Serving", user: @admin2, category: @amino_acid, img_url: "https://m.media-amazon.com/images/I/71nA1jvNbbL._AC_SL1500_.jpg")
 
-@createn = Product.create!(name: "Rich Piana CreaTEN", description: "Blue Raspberry, Creapure micronized Creatine monohydrate & Magnapowder", user: @admin, category: @creatine)
+@createn = Product.create!(name: "Rich Piana CreaTEN", description: "Blue Raspberry, Creapure micronized Creatine monohydrate & Magnapowder", user: @admin, category: @creatine, img_url: "https://www.priceplow.com/static/images/products/rich-piana-5-nutrition-crea-ten.png")
 
 
 @protein_review = Review.create!(body: "This has been a standard for me and my workouts - mixes very smooth and the taste is great!", user: @admin, product: @gold_standard_protein)

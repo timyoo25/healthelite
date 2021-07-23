@@ -1,0 +1,75 @@
+import { useState, useEffect } from "react"
+import { Route, Switch, useHistory } from "react-router-dom"
+import { getAllProducts, postProduct, putProduct, deleteProduct } from '../services/products'
+import { getAllReviews, postReview, putReview, deleteReview } from '../services/reviews'
+
+import Products from "../screens/Products/Products"
+import ProductCreate from "../screens/ProductCreate/ProductCreate"
+
+export default function MainContainer() {
+  const [productList, setProductList] = useState([])
+  const [reviewList, setReviewList] = useState([])
+  // const history = useHistory()
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const productData = await getAllProducts()
+      setProductList(productData)
+    }
+    const fetchReviews = async () => {
+      const reviewData = await getAllReviews()
+      setReviewList(reviewData)
+    }
+    fetchProducts()
+    fetchReviews()
+  }, [])
+  
+  const handleCreateProduct = async (formData) => {
+    const productData = await postProduct(formData)
+    setProductList((prevState) => [...prevState, productData])
+    // history.push()
+  }
+
+  const handleCreateReview = async (formData) => {
+    const reviewData = await postReview(formData)
+    setReviewList((prevState) => [...prevState, reviewData])
+    // history.push()
+  }
+
+  const handleUpdateProduct = async (id, formData) => {
+    const productData = await putProduct(id, formData)
+    setProductList((prevState) => prevState.map((product) => {
+      return product.id === Number(id) ? productData : product
+    }))
+    // history.push()
+  }
+
+  const handleUpdateReview = async (id, formData) => {
+    const reviewData = await putReview(id, formData)
+    setReviewList((prevState) => prevState.map((review) => {
+      return review.id === Number(id) ? reviewData : review
+    }))
+    // history.push()
+  }
+
+  const handleDeleteProduct = async (id) => {
+    await deleteProduct(id)
+    setProductList(prevState => prevState.filter(product => product.id !== id))
+  }
+
+  const handleDeleteReview = async (id) => {
+    await deleteReview(id)
+    setReviewList(prevState => prevState.filter(review => review.id !== id))
+  }
+
+  return (
+    <Switch>
+      <Route path='/products/new'>
+        <ProductCreate createProduct={handleCreateProduct}/>
+      </Route>
+      <Route path='/products'>
+        <Products productList={productList}/>
+      </Route>
+    </Switch>
+  )
+}
