@@ -53,6 +53,7 @@ export default function ProductCreate({ createProduct }) {
         />
       </label>
       <br />
+      <button>Create</button>
     </form>
   )
 }

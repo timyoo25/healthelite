@@ -1,0 +1,43 @@
+import { useState, useEffect } from "react"
+import { useParams, Link } from "react-router-dom"
+import { getOneProduct } from "../../services/products"
+import { getAllReviews } from "../../services/reviews"
+
+export default function ProductDetail() {
+  const [productItem, setProductItem] = useState(null)
+  const [reviewList, setReviewList] = useState([])
+  const { id } = useParams()
+
+  useEffect(() => {
+    const fetchProductItem = async () => {
+      const productData = await getOneProduct(id)
+      setProductItem(productData)
+    }
+    const fetchReviews = async () => {
+      const reviewData = await getAllReviews()
+      setReviewList(reviewData)
+    }
+    fetchProductItem()
+    fetchReviews()
+  })
+
+  return (
+    <div>
+      <img src={productItem?.img_url} />
+      <h3>{productItem?.name}</h3>
+      <p>{productItem?.description}</p>
+      <br/>
+      {reviewList.map(review => (
+        <div key={review.id}>
+          <div>
+            <p>{review.name}</p>
+            <p>{review.body}</p>
+          </div>
+        </div>
+      ))}
+      <div>
+        <Link to={`/products/${id}/edit`}>Edit</Link>
+      </div>
+    </div>
+  )
+}

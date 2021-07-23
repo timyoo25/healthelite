@@ -5,10 +5,12 @@ import { getAllReviews, postReview, putReview, deleteReview } from '../services/
 
 import Products from "../screens/Products/Products"
 import ProductCreate from "../screens/ProductCreate/ProductCreate"
+import ProductDetail from "../screens/ProductDetail/ProductDetail"
+import ProductEdit from "../screens/ProductEdit/ProductEdit"
 
 export default function MainContainer() {
   const [productList, setProductList] = useState([])
-  const [reviewList, setReviewList] = useState([])
+  // const [reviewList, setReviewList] = useState([])
   // const history = useHistory()
 
   useEffect(() => {
@@ -16,12 +18,12 @@ export default function MainContainer() {
       const productData = await getAllProducts()
       setProductList(productData)
     }
-    const fetchReviews = async () => {
-      const reviewData = await getAllReviews()
-      setReviewList(reviewData)
-    }
+    // const fetchReviews = async () => {
+    //   const reviewData = await getAllReviews()
+    //   setReviewList(reviewData)
+    // }
     fetchProducts()
-    fetchReviews()
+    // fetchReviews()
   }, [])
   
   const handleCreateProduct = async (formData) => {
@@ -30,11 +32,11 @@ export default function MainContainer() {
     // history.push()
   }
 
-  const handleCreateReview = async (formData) => {
-    const reviewData = await postReview(formData)
-    setReviewList((prevState) => [...prevState, reviewData])
-    // history.push()
-  }
+  // const handleCreateReview = async (formData) => {
+  //   const reviewData = await postReview(formData)
+  //   setReviewList((prevState) => [...prevState, reviewData])
+  //   // history.push()
+  // }
 
   const handleUpdateProduct = async (id, formData) => {
     const productData = await putProduct(id, formData)
@@ -44,28 +46,34 @@ export default function MainContainer() {
     // history.push()
   }
 
-  const handleUpdateReview = async (id, formData) => {
-    const reviewData = await putReview(id, formData)
-    setReviewList((prevState) => prevState.map((review) => {
-      return review.id === Number(id) ? reviewData : review
-    }))
-    // history.push()
-  }
+  // const handleUpdateReview = async (id, formData) => {
+  //   const reviewData = await putReview(id, formData)
+  //   setReviewList((prevState) => prevState.map((review) => {
+  //     return review.id === Number(id) ? reviewData : review
+  //   }))
+  //   // history.push()
+  // }
 
   const handleDeleteProduct = async (id) => {
     await deleteProduct(id)
     setProductList(prevState => prevState.filter(product => product.id !== id))
   }
 
-  const handleDeleteReview = async (id) => {
-    await deleteReview(id)
-    setReviewList(prevState => prevState.filter(review => review.id !== id))
-  }
+  // const handleDeleteReview = async (id) => {
+  //   await deleteReview(id)
+  //   setReviewList(prevState => prevState.filter(review => review.id !== id))
+  // }
 
   return (
     <Switch>
       <Route path='/products/new'>
         <ProductCreate createProduct={handleCreateProduct}/>
+      </Route>
+      <Route path='/products/:id/edit'>
+        <ProductEdit productList={productList} handleUpdateProduct={handleUpdateProduct}/>
+      </Route>
+      <Route path='/products/:id'>
+        <ProductDetail />
       </Route>
       <Route path='/products'>
         <Products productList={productList}/>
