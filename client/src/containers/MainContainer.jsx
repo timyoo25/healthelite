@@ -7,10 +7,11 @@ import Products from "../screens/Products/Products"
 import ProductCreate from "../screens/ProductCreate/ProductCreate"
 import ProductDetail from "../screens/ProductDetail/ProductDetail"
 import ProductEdit from "../screens/ProductEdit/ProductEdit"
+import ReviewCreate from "../screens/ReviewCreate/ReviewCreate"
 
 export default function MainContainer() {
   const [productList, setProductList] = useState([])
-  // const [reviewList, setReviewList] = useState([])
+  const [reviewList, setReviewList] = useState([])
   // const history = useHistory()
 
   useEffect(() => {
@@ -32,11 +33,11 @@ export default function MainContainer() {
     // history.push()
   }
 
-  // const handleCreateReview = async (formData) => {
-  //   const reviewData = await postReview(formData)
-  //   setReviewList((prevState) => [...prevState, reviewData])
-  //   // history.push()
-  // }
+  const handleCreateReview = async (formData) => {
+    const reviewData = await postReview(formData)
+    setReviewList((prevState) => [...prevState, reviewData])
+    // history.push()
+  }
 
   const handleUpdateProduct = async (id, formData) => {
     const productData = await putProduct(id, formData)
@@ -69,7 +70,10 @@ export default function MainContainer() {
       <Route path='/products/new'>
         <ProductCreate createProduct={handleCreateProduct}/>
       </Route>
-      <Route path='/products/:id/edit'>
+      <Route exact path='/products/:id/reviews/new'>
+        <ReviewCreate handleCreateReview={handleCreateReview} />
+      </Route>
+      <Route exact path='/products/:id/edit'>
         <ProductEdit productList={productList} handleUpdateProduct={handleUpdateProduct}/>
       </Route>
       <Route path='/products/:id'>

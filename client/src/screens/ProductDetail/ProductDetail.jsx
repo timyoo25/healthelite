@@ -37,6 +37,7 @@ export default function ProductDetail() {
       ))}
       <div>
         <Link to={`/products/${id}/edit`}>Edit</Link>
+        <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
       </div>
     </div>
   )
