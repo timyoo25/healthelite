@@ -13,7 +13,7 @@ import ReviewEdit from "../screens/ReviewEdit/ReviewEdit"
 export default function MainContainer() {
   const [productList, setProductList] = useState([])
   const [reviewList, setReviewList] = useState([])
-  // const history = useHistory()
+  const history = useHistory()
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -31,13 +31,13 @@ export default function MainContainer() {
   const handleCreateProduct = async (formData) => {
     const productData = await postProduct(formData)
     setProductList((prevState) => [...prevState, productData])
-    // history.push()
+    // history.push('/products')
   }
 
-  const handleCreateReview = async (formData) => {
+  const handleCreateReview = async (id, formData) => {
     const reviewData = await postReview(formData)
     setReviewList((prevState) => [...prevState, reviewData])
-    // history.push()
+    // history.push(`/products/${id}`)
   }
 
   const handleUpdateProduct = async (id, formData) => {
@@ -45,7 +45,7 @@ export default function MainContainer() {
     setProductList((prevState) => prevState.map((product) => {
       return product.id === Number(id) ? productData : product
     }))
-    // history.push()
+    history.push('/products')
   }
 
   const handleUpdateReview = async (id, formData) => {
@@ -53,7 +53,7 @@ export default function MainContainer() {
     setReviewList((prevState) => prevState.map((review) => {
       return review.id === Number(id) ? reviewData : review
     }))
-    // history.push()
+    history.push()
   }
 
   const handleDeleteProduct = async (id) => {
@@ -69,7 +69,7 @@ export default function MainContainer() {
   return (
     <Switch>
       <Route path='/products/new'>
-        <ProductCreate createProduct={handleCreateProduct}/>
+        <ProductCreate handleCreateProduct={handleCreateProduct}/>
       </Route>
       <Route path='/products/:id/reviews/:id/edit'>
         <ReviewEdit reviewList={reviewList} handleUpdateReview={handleUpdateReview}/>

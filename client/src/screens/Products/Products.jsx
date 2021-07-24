@@ -16,7 +16,7 @@ export default function Products({ productList }) {
         <div key={product.id}>
           <Link to={`/products/${product.id}`}>
             <div>
-              <img src={product.img_url} />
+              <img src={product.img_url} height="200" width="200"/>
               <p>{product.name}</p>
             </div>
             </Link>

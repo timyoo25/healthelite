@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseURL =
   process.env.NODE_ENV === "production"
-    ? "deployment linke here"
+    ? "deployment link here"
     : "http://localhost:3000";
 
 const api = axios.create({

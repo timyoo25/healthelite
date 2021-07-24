@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function ProductCreate({ createProduct }) {
+export default function ProductCreate({ handleCreateProduct }) {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
@@ -18,8 +18,8 @@ export default function ProductCreate({ createProduct }) {
 
   return (
     <form onSubmit={(e) => {
-      e.preventDefault()
-      createProduct(formData)
+      e.preventDefault();
+      handleCreateProduct(formData);
     }}
     >
       <h3>Create Product</h3>

@@ -19,7 +19,7 @@ import Home from "./screens/Home/Home";
 function App() {
   const [productList, setProductList] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
-  // const history = useHistory();
+  const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -37,13 +37,13 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    // history.push("/");
+    history.push("/");
   };
 
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    // history.push("/");
+    history.push("/");
   };
 
   const handleLogout = () => {

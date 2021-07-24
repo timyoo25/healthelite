@@ -19,14 +19,18 @@ export default function ProductDetail() {
     }
     fetchProductItem()
     fetchReviews()
-  })
+  },[])
 
   return (
     <div>
-      <img src={productItem?.img_url} />
+      <img src={productItem?.img_url} height="300" width="300" />
       <h3>{productItem?.name}</h3>
       <p>{productItem?.description}</p>
       <br/>
+      <div>
+        <Link to={`/products/${id}/edit`}>Edit</Link>
+        <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
+      </div>
       {reviewList.map(review => (
         <div key={review.id}>
           <div>
@@ -36,10 +40,6 @@ export default function ProductDetail() {
           </div>
         </div>
       ))}
-      <div>
-        <Link to={`/products/${id}/edit`}>Edit</Link>
-        <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
-      </div>
     </div>
   )
 }
