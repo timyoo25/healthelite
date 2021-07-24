@@ -32,6 +32,7 @@ export default function ProductDetail() {
           <div>
             <p>{review.name}</p>
             <p>{review.body}</p>
+            <Link to={`/products/${id}/reviews/${id}/edit`}>Edit</Link>
           </div>
         </div>
       ))}

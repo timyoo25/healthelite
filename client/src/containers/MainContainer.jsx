@@ -8,6 +8,7 @@ import ProductCreate from "../screens/ProductCreate/ProductCreate"
 import ProductDetail from "../screens/ProductDetail/ProductDetail"
 import ProductEdit from "../screens/ProductEdit/ProductEdit"
 import ReviewCreate from "../screens/ReviewCreate/ReviewCreate"
+import ReviewEdit from "../screens/ReviewEdit/ReviewEdit"
 
 export default function MainContainer() {
   const [productList, setProductList] = useState([])
@@ -47,13 +48,13 @@ export default function MainContainer() {
     // history.push()
   }
 
-  // const handleUpdateReview = async (id, formData) => {
-  //   const reviewData = await putReview(id, formData)
-  //   setReviewList((prevState) => prevState.map((review) => {
-  //     return review.id === Number(id) ? reviewData : review
-  //   }))
-  //   // history.push()
-  // }
+  const handleUpdateReview = async (id, formData) => {
+    const reviewData = await putReview(id, formData)
+    setReviewList((prevState) => prevState.map((review) => {
+      return review.id === Number(id) ? reviewData : review
+    }))
+    // history.push()
+  }
 
   const handleDeleteProduct = async (id) => {
     await deleteProduct(id)
@@ -69,6 +70,9 @@ export default function MainContainer() {
     <Switch>
       <Route path='/products/new'>
         <ProductCreate createProduct={handleCreateProduct}/>
+      </Route>
+      <Route path='/products/:id/reviews/:id/edit'>
+        <ReviewEdit reviewList={reviewList} handleUpdateReview={handleUpdateReview}/>
       </Route>
       <Route exact path='/products/:id/reviews/new'>
         <ReviewCreate handleCreateReview={handleCreateReview} />
