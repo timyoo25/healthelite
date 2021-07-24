@@ -1,12 +1,13 @@
 import { useState } from "react"
 
-export default function ProductCreate({ handleCreateProduct }) {
+export default function ProductCreate({ handleCreateProduct, categoryList }) {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
-    img_url: ''
+    img_url: '',
+    category_id: ''
   })
-  const { name, description, img_url } = formData
+  const { name, description, img_url, category_id } = formData
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -53,6 +54,18 @@ export default function ProductCreate({ handleCreateProduct }) {
         />
       </label>
       <br />
+      <select
+        name='category_id'
+        onChange={handleChange}
+        defaultValue='default'
+      >
+        <option disabled value='default'>
+          -- Select a Category --
+        </option>
+        {categoryList.map(category => (
+          <option key={category.id} value={category.id}>{category.name}</option>
+        ))}
+      </select>
       <button>Create</button>
     </form>
   )

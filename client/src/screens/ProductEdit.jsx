@@ -22,7 +22,7 @@ export default function ProductEdit({productList, handleUpdateProduct}) {
     if (productList.length) {
       prefillFormData()
     }
-  }, [])
+  }, [productList])
 
   const handleChange = (e) => {
     const { name, value } = e.target

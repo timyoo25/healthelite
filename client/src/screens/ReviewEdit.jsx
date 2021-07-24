@@ -7,7 +7,7 @@ export default function ReviewEdit({ reviewList, handleUpdateReview }) {
     body: ''
   })
   const { body } = formData
-  const { id } = useParams()
+  const { id, productId } = useParams()
 
   useEffect(() => {
     const prefillFormData = () => {
@@ -19,7 +19,7 @@ export default function ReviewEdit({ reviewList, handleUpdateReview }) {
     if (reviewList.length) {
       prefillFormData()
     }
-  },[])
+  },[reviewList])
 
   const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -32,7 +32,7 @@ export default function ReviewEdit({ reviewList, handleUpdateReview }) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault()
-      handleUpdateReview(formData)
+      handleUpdateReview(productId, id, formData)
     }}
     >
       <h3>Edit Review</h3>

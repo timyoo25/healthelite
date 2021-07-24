@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
   resources :categories, only: :index
   resources :users, only: :create
-  resources :products, except: :create do 
+  resources :products do 
     resources :reviews
   end
-  post '/categories/:category_id/products', to: 'products#create'
+  # post '/categories/:category_id/products', to: 'products#create'
   get '/categories/:category_id/products', to: 'products#get_by_category'
   # put '/categories/:category_id/products/:id', to: 'products#add_category'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

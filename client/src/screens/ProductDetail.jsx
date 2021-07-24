@@ -5,7 +5,6 @@ import { getAllReviews } from "../services/reviews"
 
 export default function ProductDetail() {
   const [productItem, setProductItem] = useState(null)
-  const [reviewList, setReviewList] = useState([])
   const { id } = useParams()
 
   useEffect(() => {
@@ -13,12 +12,7 @@ export default function ProductDetail() {
       const productData = await getOneProduct(id)
       setProductItem(productData)
     }
-    const fetchReviews = async () => {
-      const reviewData = await getAllReviews()
-      setReviewList(reviewData)
-    }
     fetchProductItem()
-    fetchReviews()
   },[])
 
   return (
@@ -31,12 +25,12 @@ export default function ProductDetail() {
         <Link to={`/products/${id}/edit`}>Edit</Link>
         <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
       </div>
-      {reviewList.map(review => (
+      {productItem?.reviews.map(review => (
         <div key={review.id}>
           <div>
             <p>{review.name}</p>
             <p>{review.body}</p>
-            <Link to={`/products/${id}/reviews/${id}/edit`}>Edit</Link>
+            <Link to={`/products/${id}/reviews/${review.id}/edit`}>Edit</Link>
           </div>
         </div>
       ))}

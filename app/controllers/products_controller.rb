@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product.user = @current_user
-    @product.category = Category.find(params[:category_id])
+    # @product.category = Category.find(params[:category_id])
 
     if @product.save
       render json: @product, status: :created
@@ -56,6 +56,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:name, :description, :user_id, :category_id)
+      params.require(:product).permit(:name, :description, :img_url, :category_id)
     end
 end
