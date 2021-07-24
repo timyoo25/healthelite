@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import { getOneProduct } from "../../services/products"
-import { getAllReviews } from "../../services/reviews"
+import { getOneProduct } from "../services/products"
+import { getAllReviews } from "../services/reviews"
 
 export default function ProductDetail() {
   const [productItem, setProductItem] = useState(null)

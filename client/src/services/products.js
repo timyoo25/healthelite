@@ -11,7 +11,7 @@ export const getOneProduct = async (id) => {
 };
 
 export const postProduct = async (productData) => {
-  const res = await api.post("/products", { product: productData });
+  const res = await api.post("/products/", { product: productData });
   return res.data;
 };
 

@@ -10,11 +10,11 @@ import { getAllProducts } from "./services/products";
 
 import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
-import Login from "./screens/Login/Login";
-import Register from "./screens/Register/Register";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
 
 import "./App.css";
-import Home from "./screens/Home/Home";
+import Home from "./screens/Home";
 
 function App() {
   const [productList, setProductList] = useState([]);

@@ -3,12 +3,12 @@ import { Route, Switch, useHistory } from "react-router-dom"
 import { getAllProducts, postProduct, putProduct, deleteProduct } from '../services/products'
 import { getAllReviews, postReview, putReview, deleteReview } from '../services/reviews'
 
-import Products from "../screens/Products/Products"
-import ProductCreate from "../screens/ProductCreate/ProductCreate"
-import ProductDetail from "../screens/ProductDetail/ProductDetail"
-import ProductEdit from "../screens/ProductEdit/ProductEdit"
-import ReviewCreate from "../screens/ReviewCreate/ReviewCreate"
-import ReviewEdit from "../screens/ReviewEdit/ReviewEdit"
+import Products from "../screens/Products"
+import ProductCreate from "../screens/ProductCreate"
+import ProductDetail from "../screens/ProductDetail"
+import ProductEdit from "../screens/ProductEdit"
+import ReviewCreate from "../screens/ReviewCreate"
+import ReviewEdit from "../screens/ReviewEdit"
 
 export default function MainContainer() {
   const [productList, setProductList] = useState([])
