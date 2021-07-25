@@ -12,6 +12,7 @@ import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
+import Products from "./screens/Products";
 
 import "./App.css";
 import Home from "./screens/Home";
@@ -69,7 +70,10 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route paht="/products">
+          <Route path="/categories/:category_id/products">
+            <Products productList={productList} />
+          </Route>
+          <Route exact path="/products">
             <MainContainer />
           </Route>
         </Switch>

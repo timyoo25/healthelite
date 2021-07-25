@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-export default function ReviewEdit({ reviewList, handleUpdateReview }) {
+export default function ReviewEdit({ reviewList, handleUpdateReview, handleDeleteReview }) {
   const [formData, setFormData] = useState({
     body: ''
   })
@@ -44,6 +44,9 @@ export default function ReviewEdit({ reviewList, handleUpdateReview }) {
           onChange={handleChange}
           />
       </label>
+      <button onClick={() => handleDeleteReview(productId, id)}>
+        Delete
+      </button>
       <button>Submit</button>
     </form>
   )

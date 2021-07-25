@@ -44,7 +44,7 @@ export default function MainContainer() {
   const handleCreateReview = async (id, formData) => {
     const reviewData = await postReview(id, formData)
     setReviewList((prevState) => [...prevState, reviewData])
-    // history.push(`/products/${id}`)
+    history.push(`/products/${id}`)
   }
 
   const handleUpdateProduct = async (id, formData) => {
@@ -60,39 +60,56 @@ export default function MainContainer() {
     setReviewList((prevState) => prevState.map((review) => {
       return review.id === Number(id) ? reviewData : review
     }))
-    history.push()
+    history.push(`/products/${id}`)
   }
 
   const handleDeleteProduct = async (id) => {
     await deleteProduct(id)
     setProductList(prevState => prevState.filter(product => product.id !== id))
+    history.push('/products')
   }
 
-  // const handleDeleteReview = async (id) => {
-  //   await deleteReview(id)
-  //   setReviewList(prevState => prevState.filter(review => review.id !== id))
-  // }
+  const handleDeleteReview = async (productId, id) => {
+    await deleteReview(productId, id)
+    setReviewList(prevState => prevState.filter(review => review.id !== id))
+    history.push(`/products/${productId}`)
+  }
 
   return (
     <Switch>
       <Route path='/products/new'>
-        <ProductCreate handleCreateProduct={handleCreateProduct} categoryList={categoryList}/>
+        <ProductCreate
+          handleCreateProduct={handleCreateProduct}
+          categoryList={categoryList}
+        />
       </Route>
       <Route path='/products/:productId/reviews/:id/edit'>
-        <ReviewEdit reviewList={reviewList} handleUpdateReview={handleUpdateReview}/>
+        <ReviewEdit
+          reviewList={reviewList}
+          handleUpdateReview={handleUpdateReview}
+          handleDeleteReview={handleDeleteReview}
+        />
       </Route>
-      <Route exact path='/products/:id/reviews/new'>
-        <ReviewCreate handleCreateReview={handleCreateReview} />
+      <Route path='/products/:id/reviews/new'>
+        <ReviewCreate
+          handleCreateReview={handleCreateReview}
+        />
       </Route>
-      <Route exact path='/products/:id/edit'>
-        <ProductEdit productList={productList} handleUpdateProduct={handleUpdateProduct}/>
+      <Route path='/products/:id/edit'>
+        <ProductEdit
+          productList={productList}
+          handleUpdateProduct={handleUpdateProduct}
+        />
       </Route>
       <Route path='/products/:id'>
-        <ProductDetail />
+        <ProductDetail
+          handleDeleteProduct={handleDeleteProduct}
+        />
       </Route>
-      <Route path='/products'>
+      <Route exact path='/products'>
         <Products productList={productList}/>
       </Route>
+      
     </Switch>
   )
 }
