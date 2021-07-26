@@ -2,7 +2,7 @@ import axios from "axios";
 
 const baseURL =
   process.env.NODE_ENV === "production"
-    ? "deployment link here"
+    ? "https://healthelite-api.herokuapp.com/"
     : "http://localhost:3000";
 
 const api = axios.create({
