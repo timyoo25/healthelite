@@ -1,0 +1,24 @@
+.product-parent {
+  background-color: lightskyblue;
+}
+
+.product-title {
+  background-color: limegreen;
+}
+
+.product-create-link {
+  background-color: magenta;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+}
+
+.each-product-link {
+  background-color: mediumpurple;
+}
+
+.product-information {
+  background-color: yellow;
+}

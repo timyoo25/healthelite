@@ -1,0 +1,38 @@
+.login-form-parent {
+  background-color: darksalmon;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-form-container {
+  background-color: gold;
+  display: flex;
+  flex-flow: column;
+  margin: 30px;
+  justify-content: center;
+}
+
+.login-title {
+  background-color: darkseagreen;
+}
+
+.login-label {
+  text-align: left;
+}
+
+.login-email {
+  background-color: darkslateblue;
+}
+
+.login-password {
+  background-color: deepskyblue;
+}
+
+.login-submit {
+  background-color: dimgray;
+}
+
+.create-link {
+  background-color: firebrick;
+}

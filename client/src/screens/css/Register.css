@@ -1,0 +1,35 @@
+.register-form-parent {
+  background-color: gold;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register-form-container {
+  background-color: gray;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.register-title {
+  background-color: lightpink;
+}
+
+.register-username {
+  background-color: hotpink;
+}
+
+.register-email {
+  background-color: indigo;
+}
+
+.register-password {
+  background-color: lawngreen;
+}
+
+.register-label {
+}
+
+.register-input {
+}

@@ -1,6 +1,8 @@
 import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
+import './css/Products.css'
+
 export default function Products({ productList }) {
   const [products, setProducts] = useState()
 
@@ -19,19 +21,21 @@ export default function Products({ productList }) {
   }, [category_id, productList])
 
   return (
-    <div>
-      <h3>Products</h3>
-      <Link to='/products/new'>Create Product</Link>
-      {products && products.map(product => (
-        <div key={product.id}>
-          <Link to={`/products/${product.id}`}>
-            <div>
-              <img src={product.img_url} height="200" width="200"/>
-              <p>{product.name}</p>
-            </div>
-          </Link>
-        </div>
-      ))}
+    <div className='product-parent'>
+      <h3 className='product-title'>Products</h3>
+      <Link className='product-create-link' to='/products/new'>Create Product</Link>
+      <div className='products-list'>
+        {products && products.map(product => (
+          <div key={product.id} className='each-product-link'>
+            <Link to={`/products/${product.id}`}>
+              <div className='product-information'>
+                <img src={product.img_url} height="200" width="200"/>
+                <p>{product.name}</p>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

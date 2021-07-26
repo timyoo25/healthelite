@@ -109,7 +109,6 @@ export default function MainContainer() {
       <Route exact path='/products'>
         <Products productList={productList}/>
       </Route>
-      
     </Switch>
   )
 }

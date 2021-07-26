@@ -67,14 +67,14 @@ function App() {
           <Route path="/register">
             <Register handleRegister={handleRegister} />
           </Route>
-          <Route exact path="/">
-            <Home />
+          <Route path="/products">
+            <MainContainer />
           </Route>
           <Route path="/categories/:category_id/products">
             <Products productList={productList} />
           </Route>
-          <Route exact path="/products">
-            <MainContainer />
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </Layout>

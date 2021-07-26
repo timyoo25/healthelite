@@ -19,33 +19,43 @@ export default function Login({ handleLogin }) {
   }
 
   return (
-    <form classname=''
+    <div className='login-form-parent'>
+    <form className='login-form-container'
       onSubmit={(e) => {
       e.preventDefault()
       handleLogin(formData)
     }}
     >
-      <h1>Login</h1>
-      <label>Email: 
-        <input
-          type='text'
-          name='email'
-          value={email}
-          onChange={handleChange}
-        />
-      <br />
-      </label>
-      <label>Password: 
-        <input
-          type='password'
-          name='password'
-          value={password}
-          onChange={handleChange}
-        />    
-      </label>
-      <br />
-      <button>Login</button>
-      <p>No Account?<Link to='/register'>Create Account</Link></p>
-    </form>
+      <div className='login-title'>
+        <h1>Login</h1>
+      </div>
+      <div className='login-email'>
+        <label className='login-label'>Email: 
+          <input className='login-input'
+            type='text'
+            name='email'
+            value={email}
+            onChange={handleChange}
+            />
+        </label>
+      </div>
+      <div className='login-password'>
+        <label className='login-label'>Password: 
+          <input className='login-input'
+            type='password'
+            name='password'
+            value={password}
+            onChange={handleChange}
+            />    
+        </label>
+      </div>
+      <div className='login-submit'>
+        <button>Login</button>
+      </div>
+      <div className='create-link'>
+        <p>No Account?<Link to='/register'>Create Account</Link></p>
+      </div>
+      </form>
+    </div>
   )
 }

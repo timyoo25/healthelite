@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+import './css/Register.css'
+
 export default function Register({ handleRegister }) {
   const [formData, setFormData] = useState({
     username: '',
@@ -17,40 +19,46 @@ export default function Register({ handleRegister }) {
   }
   
   return (
-    <form onSubmit={(e) => {
+    <div className='register-form-parent'>
+      <form className='register-form-container'
+        onSubmit={(e) => {
       e.preventDefault()
       handleRegister(formData)
     }}
     >
-      <h1>Create Account</h1>
-      <label>Username:
-        <input
-          type='text'
-          name='username'
-          value={username}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>Email:
-        <input
-          type='text'
-          name='email'
-          value={email}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>Password:
-        <input
-          type='password'
-          name='password'
-          value={password}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <button>Create</button>
+      <h1 className='register-title'>Create Account</h1>
+      <div  className='register-username'>
+        <label className='register-label'>Username:
+          <input className='register-input'
+            type='text'
+            name='username'
+            value={username}
+            onChange={handleChange}
+            />
+        </label>
+      </div>
+      <div className='register-email'>
+        <label className='register-label'>Email:
+          <input className='register-input'
+            type='text'
+            name='email'
+            value={email}
+            onChange={handleChange}
+            />
+        </label>
+      </div>
+      <div className='register-password'>
+        <label className='register-label'>Password:
+          <input className='register-input'
+            type='password'
+            name='password'
+            value={password}
+            onChange={handleChange}
+            />
+        </label>
+      </div>
+      <button className='register-button'>Create</button>
     </form>
+  </div>
   )
 }
