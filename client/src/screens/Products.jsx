@@ -4,14 +4,12 @@ import { useEffect, useState } from 'react'
 export default function Products({ productList }) {
   const [products, setProducts] = useState()
 
-  const handleCategory = (e) => {
-    const name = e.target.innerText
-    const productsCategory = productList.filter(product => product.category === name)
-  }
+  // const handleCategory = (e) => {
+  //   const name = e.target.innerText
+  //   const productsCategory = productList.filter(product => product.category === name)
+  // }
   const { category_id } = useParams()
-  // const setProducts = productList
-  // category_id && setProducts = productList.filter(product => product.category_id === +category_id);
-  console.log(category_id)
+
   useEffect(() => {
     setProducts(productList)
     if (category_id) {
@@ -19,6 +17,7 @@ export default function Products({ productList }) {
       setProducts(products)
     }
   }, [category_id, productList])
+
   return (
     <div>
       <h3>Products</h3>

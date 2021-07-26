@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
+import './css/Login.css'
+
 export default function Login({ handleLogin }) {
   const [formData, setFormData] = useState({
     email: '',
@@ -17,13 +19,14 @@ export default function Login({ handleLogin }) {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <form classname=''
+      onSubmit={(e) => {
       e.preventDefault()
       handleLogin(formData)
     }}
     >
       <h1>Login</h1>
-      <label>Email:
+      <label>Email: 
         <input
           type='text'
           name='email'
@@ -32,7 +35,7 @@ export default function Login({ handleLogin }) {
         />
       <br />
       </label>
-      <label>Password:
+      <label>Password: 
         <input
           type='password'
           name='password'

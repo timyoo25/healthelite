@@ -1,0 +1,39 @@
+.nav-parent {
+  display: inline-flex;
+  background-color: coral;
+  width: 100vw;
+}
+
+.login-parent {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.home-title {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+}
+
+.home-title:visited {
+  text-decoration: none;
+}
+
+.user-login {
+  background-color: blueviolet;
+  display: inline-flex;
+}
+
+.category-links-parent {
+  background-color: chartreuse;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.category-links:link,
+.category-links:hover,
+.category-links:visited {
+  text-decoration: none;
+}

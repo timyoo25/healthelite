@@ -1,0 +1,42 @@
+.home-parent {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.intro-one-parent {
+  display: flex;
+  background-color: crimson;
+}
+
+.quote-one {
+  display: flex;
+  background-color: cyan;
+  width: 50vw;
+  height: 50vh;
+}
+
+.image-one {
+  display: flex;
+  background-color: darkblue;
+  width: 50vw;
+  height: 50vh;
+}
+
+.intro-two-parent {
+  display: flex;
+  background-color: darkgoldenrod;
+}
+
+.quote-two {
+  display: flex;
+  background-color: darkgreen;
+  width: 50vw;
+  height: 50vh;
+}
+
+.image-two {
+  display: flex;
+  background-color: darkmagenta;
+  width: 50vw;
+  height: 50vh;
+}
