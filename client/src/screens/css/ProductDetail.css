@@ -1,0 +1,49 @@
+.product-detail-parent {
+  background-color: teal;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.product-detail-image {
+  background-color: thistle;
+}
+
+.product-detail-container {
+  background-color: dimgrey;
+}
+.product-detail-name {
+  background-color: tomato;
+}
+
+.product-detail-description {
+  background-color: turquoise;
+}
+
+.product-detail-actions-parent {
+  background-color: violet;
+}
+
+.product-detail-delete {
+  background-color: white;
+}
+
+.product-detail-edit {
+  background-color: yellow;
+}
+
+.product-detail-add-review {
+  background-color: blueviolet;
+}
+
+.reviews-list {
+  background-color: cornflowerblue;
+  display: grid;
+}
+
+.review-detail {
+  background-color: coral;
+}
+
+.review-edit {
+  background-color: darkgreen;
+}

@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom"
 import { getOneProduct } from "../services/products"
 import { getAllReviews } from "../services/reviews"
 
+import './css/ProductDetail.css'
+
 export default function ProductDetail({ handleDeleteProduct }) {
   const [productItem, setProductItem] = useState(null)
   const { id } = useParams()
@@ -16,27 +18,43 @@ export default function ProductDetail({ handleDeleteProduct }) {
   },[])
 
   return (
-    <div>
-      <img src={productItem?.img_url} height="300" width="300" />
-      <h3>{productItem?.name}</h3>
-      <p>{productItem?.description}</p>
-      <br/>
-      <div>
-        <button onClick={() => handleDeleteProduct(productItem.id)}>
-          Delete
-        </button>
-        <Link to={`/products/${id}/edit`}>Edit</Link>
-        <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
+    <div className='product-detail-parent'>
+      <div className='product-detail-image'>
+        <img src={productItem?.img_url} height="300" width="300" />
       </div>
-      {productItem?.reviews.map(review => (
-        <div key={review.id}>
-          <div>
-            <p>{review.name}</p>
-            <p>{review.body}</p>
-            <Link to={`/products/${id}/reviews/${review.id}/edit`}>Edit</Link>
+      <div className='product-detail-container'>
+        <div className='product-detail-name'>
+          <h3>{productItem?.name}</h3>
+        </div>
+        <div className='product-detail-description'>
+          <p>{productItem?.description}</p>
+        </div>
+        <div className='product-detail-actions-parent'>
+          <div className='product-detail-delete'>
+            <button onClick={() => handleDeleteProduct(productItem.id)}>
+              Delete
+            </button>
+          </div>
+          <div className='product-detail-edit'>
+            <Link to={`/products/${id}/edit`}>Edit</Link>
+          </div>
+          <div className='product-detail-add-review'>
+            <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
           </div>
         </div>
-      ))}
+      </div>
+      <div className='reviews-list'>
+        {productItem?.reviews.map(review => (
+          <div key={review.id}>
+            <div className='review-detail'>
+              <p>{review.body}</p>
+              <div className='review-edit'>
+                <Link to={`/products/${id}/reviews/${review.id}/edit`}>Edit</Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
