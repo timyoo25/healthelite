@@ -1,58 +1,87 @@
 .product-detail-parent {
-  background-color: teal;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
 }
 
 .product-detail-image {
-  background-color: white;
 }
 
 .product-detail-container {
-  background-color: dimgrey;
-  display: grid;
-  grid-template-columns: repeat(2, 400px);
-  align-content: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 400px);
+  align-content: center; */
+}
+
+.product-name-and-desc {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
 }
 
 .product-detail-name {
-  background-color: tomato;
+  margin: 20px;
 }
 
 .product-detail-description {
-  background-color: turquoise;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 300px;
+  height: 200px;
 }
 
 .product-detail-actions-parent {
-  background-color: violet;
+  margin: 20px;
 }
 
 .product-detail-delete {
-  background-color: white;
+  margin: 10px 10px;
+  padding: 5px;
+  font-size: medium;
+  border-radius: 5px;
 }
 
-.product-detail-edit {
-  background-color: yellow;
-}
-
+.product-detail-edit,
 .product-detail-add-review {
-  background-color: blueviolet;
+  margin: 30px 10px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .reviews-list {
-  background-color: cornflowerblue;
   display: grid;
+  grid-template-columns: repeat(3, 3fr);
   justify-content: center;
+  margin: 20px;
 }
 
 .review-container {
+  border-radius: 15px;
+  margin: 20px;
 }
 
 .review-detail {
-  background-color: coral;
+  align-items: center;
+  padding: 10px;
+  text-align: left;
+  width: 315px;
+  height: 110px;
+  border: 2px solid black;
+  border-radius: 15px;
 }
 
 .review-edit {
-  background-color: darkgreen;
+  display: flex;
+  justify-content: center;
 }

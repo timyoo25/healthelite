@@ -17,10 +17,10 @@ export default function Products({ productList }) {
 
   return (
     <div className='product-parent'>
-      <h3 className='product-title'>Products</h3>
+      <h3 className='product-title'>PRODUCTS</h3>
       <hr className='product-line'/>
       <div className='product-create-link-container'>
-        <Link className='product-create-link' to='/products/new'>Create Product</Link>
+        <Link className='product-create-link' to='/products/new'>CREATE PRODUCT</Link>
       </div>
       <div className='products-list'>
         {products && products.map(product => (

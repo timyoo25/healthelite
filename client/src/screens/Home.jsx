@@ -5,7 +5,7 @@ export default function Home() {
     <div className='home-parent'>
       <div className='intro-one-parent'>
         <div className='quote-one'>
-          <h1>Real Supplements reviewed by real people</h1>
+          <h1>REAL SUPPLEMENTS REVIEWED BY REAL PEOPLE</h1>
         </div>
         <div className='image-one'>
         </div>
@@ -14,7 +14,7 @@ export default function Home() {
         <div className='image-two'>
         </div>
         <div className='quote-two'>
-        <h1>Let's reach our goals together</h1>
+          <h1>LET'S REACH OUR GOALS TOGETHER</h1>
         </div>
       </div>
     </div>

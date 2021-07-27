@@ -23,24 +23,25 @@ export default function ProductDetail({ handleDeleteProduct }) {
         <img src={productItem?.img_url} height="300" width="300" />
       </div>
       <div className='product-detail-container'>
-        <div className='product-detail-name'>
-          <h3>{productItem?.name}</h3>
+        <div className='product-name-and-desc'>
+          <div className='product-detail-name'>
+            <h3>{productItem?.name}</h3>
+          </div>
+          <div className='product-detail-description'>
+            <p>{productItem?.description}</p>
+          </div>
         </div>
         <div className='product-detail-actions-parent'>
-          <div className='product-detail-delete'>
-            <button onClick={() => handleDeleteProduct(productItem.id)}>
-              Delete
-            </button>
-          </div>
           <div className='product-detail-edit'>
             <Link to={`/products/${id}/edit`}>Edit</Link>
           </div>
           <div className='product-detail-add-review'>
             <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
           </div>
-        </div>
-        <div className='product-detail-description'>
-          <p>{productItem?.description}</p>
+          <button className='product-detail-delete'
+            onClick={() => handleDeleteProduct(productItem.id)}>
+            Delete
+          </button>
         </div>
       </div>
       <div className='reviews-list'>

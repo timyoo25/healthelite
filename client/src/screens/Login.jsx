@@ -26,8 +26,8 @@ export default function Login({ handleLogin }) {
       handleLogin(formData)
     }}
     >
-      <div className='login-title'>
-        <h1>Login</h1>
+      <div className='login-title-container'>
+        <h1 className='login-title'>Login</h1>
       </div>
       <div className='login-email'>
         <label className='login-label'>Email: 
@@ -49,10 +49,8 @@ export default function Login({ handleLogin }) {
             />    
         </label>
       </div>
-      <div className='login-submit'>
-        <button>Login</button>
-      </div>
-      <div className='create-link'>
+      <button className='login-submit'>Login</button>
+      <div className='create-link-container'>
         <p>No Account?<Link to='/register'>Create Account</Link></p>
       </div>
       </form>

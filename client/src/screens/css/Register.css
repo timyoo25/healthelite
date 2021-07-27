@@ -1,35 +1,51 @@
 .register-form-parent {
-  background-color: gold;
   display: flex;
   justify-content: center;
   height: 100vh;
+  align-items: center;
 }
 
 .register-form-container {
-  background-color: gray;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 600px;
+}
+
+.register-title-container {
+  padding: 20px;
+  margin: 10px;
+  padding-bottom: 40px;
 }
 
 .register-title {
-  background-color: lightpink;
+  font-size: xx-large;
 }
 
-.register-username {
-  background-color: hotpink;
-}
-
-.register-email {
-  background-color: indigo;
-}
-
+.register-username,
+.register-email,
 .register-password {
-  background-color: lawngreen;
+  padding: 25px;
 }
 
 .register-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+  font-weight: bolder;
+  align-items: center;
 }
 
 .register-input {
+  width: 50%;
+  font-size: larger;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.register-button {
+  margin: 30px;
+  width: 40%;
+  font-size: larger;
+  border-radius: 5px;
 }

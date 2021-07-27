@@ -26,7 +26,9 @@ export default function Register({ handleRegister }) {
       handleRegister(formData)
     }}
     >
-      <h1 className='register-title'>Create Account</h1>
+      <div className='register-title-container'>
+        <h1 className='register-title'>Create Account</h1>
+      </div>
       <div  className='register-username'>
         <label className='register-label'>Username:
           <input className='register-input'
