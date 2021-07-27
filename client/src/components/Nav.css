@@ -1,6 +1,5 @@
 .nav-parent {
   display: inline-flex;
-  background-color: coral;
   width: 100vw;
 }
 
@@ -11,7 +10,6 @@
 }
 
 .home-title {
-  background-color: aqua;
   display: flex;
   justify-content: center;
 }
@@ -21,12 +19,10 @@
 }
 
 .user-login {
-  background-color: blueviolet;
   display: inline-flex;
 }
 
 .category-links-parent {
-  background-color: chartreuse;
   display: flex;
   justify-content: space-around;
   width: 100vw;
@@ -36,4 +32,8 @@
 .category-links:hover,
 .category-links:visited {
   text-decoration: none;
+}
+
+.nav-line {
+  border: 1px solid black;
 }

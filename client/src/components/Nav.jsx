@@ -43,6 +43,7 @@ export default function Nav({ currentUser, handleLogout}) {
             <Link to='/categories/5/products'>Vitamins</Link>
           </div>
         </nav>
+        <hr className='nav-line'/>
       </header>
     </div>
   )

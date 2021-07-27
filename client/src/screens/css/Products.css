@@ -1,13 +1,30 @@
 .product-parent {
-  background-color: lightskyblue;
 }
 
 .product-title {
-  background-color: limegreen;
+  padding: 15px;
+  font-size: xx-large;
+}
+
+.product-line {
+  border: 1px solid black;
+  margin-top: -15px;
+}
+
+.product-create-link-container {
+  display: flex;
+  justify-content: center;
 }
 
 .product-create-link {
-  background-color: magenta;
+  display: flex;
+  margin: 15px;
+  padding: 10px;
+  font-size: larger;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 40%;
+  justify-content: center;
 }
 
 .products-list {
@@ -16,9 +33,12 @@
 }
 
 .each-product-link {
-  background-color: mediumpurple;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .product-information {
-  background-color: yellow;
+  font-size: large;
 }

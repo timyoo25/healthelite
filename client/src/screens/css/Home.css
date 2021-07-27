@@ -1,42 +1,36 @@
 .home-parent {
   display: flex;
   flex-flow: wrap;
+  margin-top: 20px;
+  height: 100vh;
 }
 
-.intro-one-parent {
+.intro-one-parent,
+.intro-two-parent {
   display: flex;
-  background-color: crimson;
 }
 
-.quote-one {
+.quote-one,
+.quote-two {
   display: flex;
-  background-color: cyan;
+  justify-content: center;
+  align-items: center;
   width: 50vw;
   height: 50vh;
 }
 
 .image-one {
   display: flex;
-  background-color: darkblue;
-  width: 50vw;
-  height: 50vh;
-}
-
-.intro-two-parent {
-  display: flex;
-  background-color: darkgoldenrod;
-}
-
-.quote-two {
-  display: flex;
-  background-color: darkgreen;
+  background-image: url(https://s3-eu-west-2.amazonaws.com/images.musclefood.com/articles/22090/workout-supplements.jpg);
+  background-size: cover;
   width: 50vw;
   height: 50vh;
 }
 
 .image-two {
   display: flex;
-  background-color: darkmagenta;
+  background-image: url(https://i.kym-cdn.com/entries/icons/original/000/012/468/shakeee.jpg);
+  background-size: cover;
   width: 50vw;
   height: 50vh;
 }

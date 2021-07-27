@@ -5,11 +5,6 @@ import './css/Products.css'
 
 export default function Products({ productList }) {
   const [products, setProducts] = useState()
-
-  // const handleCategory = (e) => {
-  //   const name = e.target.innerText
-  //   const productsCategory = productList.filter(product => product.category === name)
-  // }
   const { category_id } = useParams()
 
   useEffect(() => {
@@ -23,7 +18,10 @@ export default function Products({ productList }) {
   return (
     <div className='product-parent'>
       <h3 className='product-title'>Products</h3>
-      <Link className='product-create-link' to='/products/new'>Create Product</Link>
+      <hr className='product-line'/>
+      <div className='product-create-link-container'>
+        <Link className='product-create-link' to='/products/new'>Create Product</Link>
+      </div>
       <div className='products-list'>
         {products && products.map(product => (
           <div key={product.id} className='each-product-link'>
