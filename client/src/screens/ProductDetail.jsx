@@ -34,14 +34,14 @@ export default function ProductDetail({ handleDeleteProduct, currentUser }) {
         <div className='product-detail-actions-parent'>
         { currentUser && currentUser.id === productItem?.user_id ?
           <div className='product-detail-edit'>
-            <Link to={`/products/${id}/edit`}>Edit</Link>
+            <Link id='edit' to={`/products/${id}/edit`}>Edit</Link>
           </div>
             :
             null
           }
           {currentUser ? 
         <div className='product-detail-add-review'>
-          <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
+          <Link id='add' to={`/products/${id}/reviews/new`}>Add Review</Link>
             </div>
             :
             null
@@ -63,7 +63,7 @@ export default function ProductDetail({ handleDeleteProduct, currentUser }) {
               <p>{review.body}</p>
               {currentUser && currentUser.id === review.user_id ?
               <div className='review-edit'>
-                <Link to={`/products/${id}/reviews/${review.id}/edit`}>Edit</Link>
+                <Link id='edit' to={`/products/${id}/reviews/${review.id}/edit`}>Edit</Link>
                 </div>
                 :
                 null

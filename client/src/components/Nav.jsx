@@ -10,7 +10,7 @@ export default function Nav({ currentUser, handleLogout}) {
       <header>
         <div className='login-parent'>
           <div className='home-title'>
-            <Link to='/'><h1>HealthElite</h1></Link>
+            <Link id='title' to='/'><h1>HealthElite</h1></Link>
           </div>
           <div className='user-login'>
             {currentUser ? (
@@ -25,22 +25,22 @@ export default function Nav({ currentUser, handleLogout}) {
         </div>
         <nav className='category-links-parent'>
           <div className='category-links'>
-          <Link to='/products'>All</Link>
+          <Link id='categories' to='/products'>All</Link>
           </div>
           <div className='category-links'>
-            <Link to='/categories/1/products'>Protein</Link>
+            <Link id='categories'  to='/categories/1/products'>Protein</Link>
           </div>
           <div className='category-links'>
-            <Link to='/categories/2/products'>Pre-Workout</Link>
+            <Link id='categories'  to='/categories/2/products'>Pre-Workout</Link>
           </div>
           <div className='category-links'>
-            <Link to='/categories/3/products'>Creatine</Link>
+            <Link id='categories'  to='/categories/3/products'>Creatine</Link>
           </div>
           <div className='category-links'>
-            <Link to='/categories/4/products'>Amino Acids</Link>
+            <Link id='categories'  to='/categories/4/products'>Amino Acids</Link>
           </div>
           <div className='category-links'>
-            <Link to='/categories/5/products'>Vitamins</Link>
+            <Link id='categories'  to='/categories/5/products'>Vitamins</Link>
           </div>
         </nav>
         <hr className='nav-line'/>

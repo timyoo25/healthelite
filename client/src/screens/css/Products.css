@@ -3,7 +3,11 @@
 
 .product-title {
   padding: 15px;
-  font-size: xx-large;
+  font-size: 50px;
+  color: #7f6f8b7d;
+  font-family: "Candal", sans-serif;
+  -webkit-text-stroke-width: 0.02px;
+  -webkit-text-stroke-color: #231d25;
 }
 
 .product-line {
@@ -21,10 +25,12 @@
   margin: 15px;
   padding: 10px;
   font-size: larger;
+  font-family: "Encode Sans SC", sans-serif;
   border: 2px solid black;
   border-radius: 15px;
   width: 40%;
   justify-content: center;
+  background-color: #f1f1f2;
 }
 
 .products-list {
@@ -37,8 +43,18 @@
   margin: 10px;
   padding: 10px;
   border-radius: 15px;
+  background-color: #f1f1f2;
 }
 
 .product-information {
   font-size: large;
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+#details:link,
+#create:link,
+#details:visited,
+#create:visited {
+  text-decoration: none;
+  color: #7f6f8bcf;
 }

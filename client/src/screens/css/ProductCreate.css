@@ -10,6 +10,7 @@
   border-radius: 10px;
   width: 500px;
   height: 600px;
+  background-color: #f1f1f2;
 }
 
 .product-create-title-container {
@@ -20,18 +21,18 @@
 
 .product-create-title {
   font-size: xx-large;
+  font-family: "Candal", sans-serif;
+  color: #7f6f8b7d;
+  -webkit-text-stroke-width: 0.02px;
+  -webkit-text-stroke-color: #231d25;
 }
 
-.product-create-name {
-  padding: 25px;
-}
-
-.product-create-description {
-  padding: 25px;
-}
-
+.product-create-name,
+.product-create-description,
 .product-create-image {
   padding: 25px;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #7f6f8bcf;
 }
 
 .product-create-label {
@@ -44,19 +45,20 @@
 
 .product-create-input {
   width: 50%;
-  font-size: larger;
-  padding: 3px;
+  font-size: medium;
+  padding: 5px;
   border-radius: 5px;
 }
 
 .product-create-select-category {
   padding: 25px;
-  /* font-size: larger; */
 }
 
 .select-category {
   width: 50%;
-  font-size: larger;
+  font-size: large;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #7f6f8bcf;
   padding: 3px;
   border-radius: 5px;
   border: 2px solid black;
@@ -66,5 +68,8 @@
   margin: 20px;
   width: 40%;
   font-size: larger;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #7f6f8bcf;
+  padding: 3px;
   border-radius: 5px;
 }

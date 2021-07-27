@@ -18,11 +18,11 @@ export default function Products({ productList, currentUser }) {
 
   return (
     <div className='product-parent'>
-      <h3 className='product-title'>PRODUCTS</h3>
+      <h1 className='product-title'>PRODUCTS</h1>
       <hr className='product-line'/>
       {currentUser ?
         <div className='product-create-link-container'>
-        <Link className='product-create-link' to='/products/new'>CREATE PRODUCT</Link>
+        <Link id='create' className='product-create-link' to='/products/new'>CREATE PRODUCT</Link>
       </div>
       : 
       null
@@ -30,7 +30,7 @@ export default function Products({ productList, currentUser }) {
       <div className='products-list'>
         {products && products.map(product => (
           <div key={product.id} className='each-product-link'>
-            <Link to={`/products/${product.id}`}>
+            <Link id='details' to={`/products/${product.id}`}>
               <div className='product-information'>
                 <img src={product.img_url} height="200" width="200"/>
                 <p>{product.name}</p>

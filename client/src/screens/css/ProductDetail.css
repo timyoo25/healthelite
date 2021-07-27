@@ -13,9 +13,6 @@
   flex-flow: wrap;
   justify-content: space-around;
   align-items: center;
-  /* display: grid; */
-  /* grid-template-columns: repeat(2, 400px);
-  align-content: center; */
 }
 
 .product-name-and-desc {
@@ -24,10 +21,14 @@
   justify-content: center;
   align-items: center;
   width: 400px;
+  margin-top: -40px;
 }
 
 .product-detail-name {
   margin: 20px;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #65657c;
+  font-size: 20px;
 }
 
 .product-detail-description {
@@ -38,6 +39,9 @@
   border-radius: 15px;
   width: 300px;
   height: 200px;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #65657c;
+  background-color: #f1f1f2;
 }
 
 .product-detail-actions-parent {
@@ -49,7 +53,9 @@
   padding: 5px;
   font-size: medium;
   border-radius: 5px;
-  width: 99px;
+  width: 120px;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #65657c;
 }
 
 .product-detail-edit,
@@ -58,6 +64,9 @@
   padding: 5px;
   border: 2px solid black;
   border-radius: 5px;
+  background-color: #f1f1f2;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #65657c;
 }
 
 .reviews-list {
@@ -80,9 +89,22 @@
   height: 110px;
   border: 2px solid black;
   border-radius: 15px;
+  background-color: #f1f1f2;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #c87177;
 }
 
 .review-edit {
   display: flex;
   justify-content: center;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #65657c;
+}
+
+#edit:link,
+#add:link,
+#edit:visited,
+#add:visited {
+  text-decoration: none;
+  color: #65657c;
 }

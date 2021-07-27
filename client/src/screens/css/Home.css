@@ -17,6 +17,8 @@
   align-items: center;
   width: 50vw;
   height: 50vh;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #272b3997;
 }
 
 .image-one {

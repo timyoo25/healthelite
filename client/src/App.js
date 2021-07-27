@@ -13,9 +13,9 @@ import Layout from "./layouts/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import Products from "./screens/Products";
-
-import "./App.css";
 import Home from "./screens/Home";
+
+import "./screens/css/App.css";
 
 function App() {
   const [productList, setProductList] = useState([]);
