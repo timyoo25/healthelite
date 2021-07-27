@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import './css/ReviewEdit.css'
 
 export default function ReviewEdit({ reviewList, handleUpdateReview, handleDeleteReview }) {
   const [formData, setFormData] = useState({
@@ -30,24 +31,31 @@ export default function ReviewEdit({ reviewList, handleUpdateReview, handleDelet
   };
   
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault()
-      handleUpdateReview(productId, id, formData)
-    }}
-    >
-      <h3>Edit Review</h3>
-      <label>Text:
-        <input
-          type='text'
-          name='body'
-          value={body}
-          onChange={handleChange}
-          />
-      </label>
-      <button onClick={() => handleDeleteReview(productId, id)}>
-        Delete
-      </button>
-      <button>Submit</button>
-    </form>
+    <div className='review-edit-parent'>
+      <form className='review-edit-form'
+        onSubmit={(e) => {
+        e.preventDefault()
+        handleUpdateReview(productId, id, formData)
+      }}
+      >
+        <div className='review-edit-title-container'>
+          <h3 className='review-edit-title'>Edit Review</h3>
+        </div>
+        <div className='review-edit-text-container'>
+          <textarea className='review-edit-text'
+            type='text'
+            name='body'
+            value={body}
+            onChange={handleChange}
+            />
+        </div>
+        <button className='review-edit-delete'
+          onClick={() => handleDeleteReview(productId, id)}>
+          Delete
+        </button>
+        <br />
+        <button className='review-edit-submit'>Submit</button>
+      </form>
+    </div>
   )
 }

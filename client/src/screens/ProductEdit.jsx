@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
+import './css/ProductEdit.css'
+
 export default function ProductEdit({productList, handleUpdateProduct}) {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,40 +35,48 @@ export default function ProductEdit({productList, handleUpdateProduct}) {
   }
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault()
-      handleUpdateProduct(id, formData)
-    }}
-    >
-      <h3>Edit Product</h3>
-      <label>Name:
-        <input
-          type='text'
-          name='name'
-          value={name}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>Description:
-        <input
-          type='text'
-          name='description'
-          value={description}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>Image:
-        <input
-          type='text'
-          name='img_url'
-          value={img_url}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <button>Submit</button>
-    </form>
+    <div className='product-edit-parent'>
+      <form className='product-edit-form'
+        onSubmit={(e) => {
+        e.preventDefault()
+        handleUpdateProduct(id, formData)
+      }}
+      >
+        <div className='product-edit-title-container'>
+          <h3 className='product-edit-title'>Edit Product</h3>
+        </div>
+        <div className='product-edit-name'>
+          <label className='product-edit-label'>Name
+            <input className='product-edit-input'
+              type='text'
+              name='name'
+              value={name}
+              onChange={handleChange}
+              />
+          </label>
+        </div>
+        <div className='product-edit-description'>
+          <label className='product-edit-label'>Description
+            <input className='product-edit-input'
+              type='text'
+              name='description'
+              value={description}
+              onChange={handleChange}
+              />
+          </label>
+        </div>
+        <div className='product-edit-image'>
+          <label className='product-edit-label'>Image
+            <input className='product-edit-input'
+              type='text'
+              name='img_url'
+              value={img_url}
+              onChange={handleChange}
+              />
+          </label>
+        </div>
+        <button className='product-edit-submit'>Submit</button>
+      </form>
+    </div>
   )
 }

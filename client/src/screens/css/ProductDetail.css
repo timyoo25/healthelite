@@ -2,15 +2,20 @@
   background-color: teal;
   display: flex;
   flex-flow: wrap;
+  justify-content: center;
 }
 
 .product-detail-image {
-  background-color: thistle;
+  background-color: white;
 }
 
 .product-detail-container {
   background-color: dimgrey;
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  align-content: center;
 }
+
 .product-detail-name {
   background-color: tomato;
 }
@@ -38,6 +43,10 @@
 .reviews-list {
   background-color: cornflowerblue;
   display: grid;
+  justify-content: center;
+}
+
+.review-container {
 }
 
 .review-detail {

@@ -26,9 +26,6 @@ export default function ProductDetail({ handleDeleteProduct }) {
         <div className='product-detail-name'>
           <h3>{productItem?.name}</h3>
         </div>
-        <div className='product-detail-description'>
-          <p>{productItem?.description}</p>
-        </div>
         <div className='product-detail-actions-parent'>
           <div className='product-detail-delete'>
             <button onClick={() => handleDeleteProduct(productItem.id)}>
@@ -42,10 +39,13 @@ export default function ProductDetail({ handleDeleteProduct }) {
             <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
           </div>
         </div>
+        <div className='product-detail-description'>
+          <p>{productItem?.description}</p>
+        </div>
       </div>
       <div className='reviews-list'>
         {productItem?.reviews.map(review => (
-          <div key={review.id}>
+          <div key={review.id} className='review-container'>
             <div className='review-detail'>
               <p>{review.body}</p>
               <div className='review-edit'>

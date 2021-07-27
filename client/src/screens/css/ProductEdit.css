@@ -1,0 +1,60 @@
+.product-edit-parent {
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.product-edit-form {
+  background-color: aqua;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 600px;
+}
+
+.product-edit-title-container {
+  background-color: bisque;
+  padding: 20px;
+  margin: 10px;
+  padding-bottom: 100px;
+}
+
+.product-edit-title {
+  background-color: blueviolet;
+  font-size: xx-large;
+}
+
+.product-edit-name,
+.product-edit-description,
+.product-edit-image {
+  background-color: brown;
+  padding: 30px;
+}
+
+.product-edit-label {
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  font-size: larger;
+  font-weight: bolder;
+  align-items: center;
+}
+
+.product-edit-input {
+  background-color: crimson;
+  width: 50%;
+  font-size: larger;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.product-edit-submit {
+  background-color: darkgreen;
+  margin: 20px;
+  width: 40%;
+  font-size: large;
+  border-radius: 5px;
+}

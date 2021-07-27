@@ -1,0 +1,48 @@
+.review-edit-parent {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.review-edit-form {
+  background-color: blueviolet;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 600px;
+}
+
+.review-edit-title-container {
+  background-color: chartreuse;
+  padding: 20px;
+  margin: 10px;
+  padding-bottom: 60px;
+}
+
+.review-edit-title {
+  background-color: coral;
+  font-size: xx-large;
+}
+
+.review-edit-text-container {
+  background-color: darkgoldenrod;
+  padding: 20px;
+}
+
+.review-edit-text {
+  background-color: darkgray;
+  width: 300px;
+  height: 200px;
+  font-size: medium;
+}
+
+.review-edit-delete,
+.review-edit-submit {
+  background-color: hotpink;
+  margin: 19px;
+  width: 40%;
+  padding: 5px;
+  font-size: larger;
+}
