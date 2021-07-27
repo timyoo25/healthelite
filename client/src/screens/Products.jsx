@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react'
 
 import './css/Products.css'
 
-export default function Products({ productList }) {
+export default function Products({ productList, currentUser }) {
   const [products, setProducts] = useState()
   const { category_id } = useParams()
-
+  console.log(currentUser)
   useEffect(() => {
     setProducts(productList)
     if (category_id) {
@@ -14,14 +14,19 @@ export default function Products({ productList }) {
       setProducts(products)
     }
   }, [category_id, productList])
+  
 
   return (
     <div className='product-parent'>
       <h3 className='product-title'>PRODUCTS</h3>
       <hr className='product-line'/>
-      <div className='product-create-link-container'>
+      {currentUser ?
+        <div className='product-create-link-container'>
         <Link className='product-create-link' to='/products/new'>CREATE PRODUCT</Link>
       </div>
+      : 
+      null
+      }
       <div className='products-list'>
         {products && products.map(product => (
           <div key={product.id} className='each-product-link'>

@@ -1,7 +1,7 @@
 .product-detail-parent {
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 50px;
 }
 
@@ -11,9 +11,8 @@
 .product-detail-container {
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-left: 60px;
   /* display: grid; */
   /* grid-template-columns: repeat(2, 400px);
   align-content: center; */
@@ -50,6 +49,7 @@
   padding: 5px;
   font-size: medium;
   border-radius: 5px;
+  width: 99px;
 }
 
 .product-detail-edit,
@@ -63,8 +63,8 @@
 .reviews-list {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
-  justify-content: center;
-  margin: 50px 20px;
+  /* justify-content: space-evenly; */
+  margin: 80px 20px;
 }
 
 .review-container {

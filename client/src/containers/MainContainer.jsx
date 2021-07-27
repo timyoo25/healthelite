@@ -11,11 +11,13 @@ import ProductEdit from "../screens/ProductEdit"
 import ReviewCreate from "../screens/ReviewCreate"
 import ReviewEdit from "../screens/ReviewEdit"
 
-export default function MainContainer() {
+export default function MainContainer(props) {
   const [productList, setProductList] = useState([])
   const [reviewList, setReviewList] = useState([])
   const [categoryList, setCategoryList] = useState([])
   const history = useHistory()
+
+  let {currentUser} = props
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -107,7 +109,10 @@ export default function MainContainer() {
         />
       </Route>
       <Route exact path='/products'>
-        <Products productList={productList}/>
+        <Products 
+          currentUser={currentUser}
+          productList={productList}
+        />
       </Route>
     </Switch>
   )
