@@ -6,7 +6,7 @@ import './css/Products.css'
 export default function Products({ productList, currentUser }) {
   const [products, setProducts] = useState()
   const { category_id } = useParams()
-  console.log(currentUser)
+
   useEffect(() => {
     setProducts(productList)
     if (category_id) {

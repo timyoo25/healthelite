@@ -11,13 +11,11 @@ import ProductEdit from "../screens/ProductEdit"
 import ReviewCreate from "../screens/ReviewCreate"
 import ReviewEdit from "../screens/ReviewEdit"
 
-export default function MainContainer(props) {
+export default function MainContainer({ currentUser }) {
   const [productList, setProductList] = useState([])
   const [reviewList, setReviewList] = useState([])
   const [categoryList, setCategoryList] = useState([])
   const history = useHistory()
-
-  let {currentUser} = props
 
   useEffect(() => {
     const fetchProducts = async () => {

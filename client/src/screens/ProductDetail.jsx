@@ -7,8 +7,7 @@ import './css/ProductDetail.css'
 export default function ProductDetail({ handleDeleteProduct, currentUser }) {
   const [productItem, setProductItem] = useState(null)
   const { id } = useParams()
-  console.log(productItem)
-  console.log(currentUser)
+
   useEffect(() => {
     const fetchProductItem = async () => {
       const productData = await getOneProduct(id)
@@ -37,16 +36,24 @@ export default function ProductDetail({ handleDeleteProduct, currentUser }) {
           <div className='product-detail-edit'>
             <Link to={`/products/${id}/edit`}>Edit</Link>
           </div>
-          :
-          null
+            :
+            null
+          }
+          {currentUser ? 
+        <div className='product-detail-add-review'>
+          <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
+            </div>
+            :
+            null
         }
-          <div className='product-detail-add-review'>
-            <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
-          </div>
-          <button className='product-detail-delete'
+          {currentUser && currentUser.id === productItem?.user_id ?
+            <button className='product-detail-delete'
             onClick={() => handleDeleteProduct(productItem.id)}>
-            Delete
-          </button>
+              Delete
+              </button>
+            :
+            null
+          }
         </div>
       </div>
       <div className='reviews-list'>
@@ -54,9 +61,13 @@ export default function ProductDetail({ handleDeleteProduct, currentUser }) {
           <div key={review.id} className='review-container'>
             <div className='review-detail'>
               <p>{review.body}</p>
+              {currentUser && currentUser.id === review.user_id ?
               <div className='review-edit'>
                 <Link to={`/products/${id}/reviews/${review.id}/edit`}>Edit</Link>
-              </div>
+                </div>
+                :
+                null
+              }
             </div>
           </div>
         ))}
