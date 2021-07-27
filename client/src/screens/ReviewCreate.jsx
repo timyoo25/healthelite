@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useParams } from "react-router";
 
+import './css/ReviewCreate.css'
+
 export default function ReviewCreate({handleCreateReview}) {
   const [formData, setFormData] = useState({
     body: ''
@@ -17,21 +19,26 @@ export default function ReviewCreate({handleCreateReview}) {
   };
   
   return (
-    <form onSubmit={(e) => {
+    <div className='review-create-parent'>
+      <form className='review-create-form'
+        onSubmit={(e) => {
       e.preventDefault()
       handleCreateReview(id, formData)
-    }}
-    >
-      <h3>Create Review</h3>
-      <label>Text:
-        <input
-          type='text'
-          name='body'
-          value={body}
-          onChange={handleChange}
-          />
-      </label>
-      <button>Submit</button>
-    </form>
+      }}
+      >
+      <div className='review-create-title-container'>
+        <h3 className='review-create-title'>Create Review</h3>
+      </div>
+        <div className='review-create-text-container'>
+          <textarea className='review-create-text'
+            type='text'
+            name='body'
+            value={body}
+            onChange={handleChange}
+            />
+        </div>
+      <button className='review-create-submit'>Submit</button>
+      </form>
+    </div>
   )
 }
