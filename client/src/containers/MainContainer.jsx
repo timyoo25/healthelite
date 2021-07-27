@@ -105,6 +105,7 @@ export default function MainContainer(props) {
       </Route>
       <Route path='/products/:id'>
         <ProductDetail
+          currentUser={currentUser}
           handleDeleteProduct={handleDeleteProduct}
         />
       </Route>

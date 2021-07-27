@@ -4,10 +4,11 @@ import { getOneProduct } from "../services/products"
 
 import './css/ProductDetail.css'
 
-export default function ProductDetail({ handleDeleteProduct }) {
+export default function ProductDetail({ handleDeleteProduct, currentUser }) {
   const [productItem, setProductItem] = useState(null)
   const { id } = useParams()
-
+  console.log(productItem)
+  console.log(currentUser)
   useEffect(() => {
     const fetchProductItem = async () => {
       const productData = await getOneProduct(id)
@@ -30,10 +31,15 @@ export default function ProductDetail({ handleDeleteProduct }) {
             <p>{productItem?.description}</p>
           </div>
         </div>
+          
         <div className='product-detail-actions-parent'>
+        { currentUser && currentUser.id === productItem?.user_id ?
           <div className='product-detail-edit'>
             <Link to={`/products/${id}/edit`}>Edit</Link>
           </div>
+          :
+          null
+        }
           <div className='product-detail-add-review'>
             <Link to={`/products/${id}/reviews/new`}>Add Review</Link>
           </div>
