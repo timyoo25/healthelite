@@ -30,7 +30,7 @@ export default function Register({ handleRegister }) {
         <h1 className='register-title'>Create Account</h1>
       </div>
       <div  className='register-username'>
-        <label className='register-label'>Username:
+        <label className='register-label'>Username
           <input className='register-input'
             type='text'
             name='username'
@@ -40,7 +40,7 @@ export default function Register({ handleRegister }) {
         </label>
       </div>
       <div className='register-email'>
-        <label className='register-label'>Email:
+        <label className='register-label'>Email
           <input className='register-input'
             type='text'
             name='email'
@@ -50,7 +50,7 @@ export default function Register({ handleRegister }) {
         </label>
       </div>
       <div className='register-password'>
-        <label className='register-label'>Password:
+        <label className='register-label'>Password
           <input className='register-input'
             type='password'
             name='password'

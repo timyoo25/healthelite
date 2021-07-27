@@ -10,6 +10,7 @@
   border-radius: 10px;
   width: 500px;
   height: 600px;
+  background-color: #f1f1f2;
 }
 
 .login-title-container {
@@ -20,11 +21,17 @@
 
 .login-title {
   font-size: xx-large;
+  font-family: "Candal", sans-serif;
+  color: #7f6f8b7d;
+  -webkit-text-stroke-width: 0.02px;
+  -webkit-text-stroke-color: #231d25;
 }
 
 .login-email,
 .login-password {
   padding: 30px;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #7f6f8bcf;
 }
 
 .login-label {
@@ -37,8 +44,8 @@
 
 .login-input {
   width: 50%;
-  font-size: larger;
-  padding: 3px;
+  font-size: medium;
+  padding: 5px;
   border-radius: 5px;
 }
 
@@ -47,8 +54,13 @@
   width: 40%;
   font-size: larger;
   border-radius: 5px;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #7f6f8bcf;
+  padding: 5px;
 }
 
 .create-link-container {
   padding-top: 50px;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #7f6f8bcf;
 }

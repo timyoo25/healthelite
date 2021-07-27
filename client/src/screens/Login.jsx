@@ -30,7 +30,7 @@ export default function Login({ handleLogin }) {
         <h1 className='login-title'>Login</h1>
       </div>
       <div className='login-email'>
-        <label className='login-label'>Email: 
+        <label className='login-label'>Email
           <input className='login-input'
             type='text'
             name='email'
@@ -40,7 +40,7 @@ export default function Login({ handleLogin }) {
         </label>
       </div>
       <div className='login-password'>
-        <label className='login-label'>Password: 
+        <label className='login-label'>Password
           <input className='login-input'
             type='password'
             name='password'
