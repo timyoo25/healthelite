@@ -42,4 +42,21 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .intro-one-parent,
+  .intro-two-parent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .quote-one,
+  .quote-two {
+    width: 100vw;
+    height: 25vh;
+  }
+
+  .image-one,
+  .image-two {
+    width: 100vw;
+  }
 }
