@@ -26,6 +26,10 @@
   color: #7f6f8bcf;
 }
 
+.user-login:hover {
+  animation: bounce 1s;
+}
+
 .category-links-parent {
   display: flex;
   justify-content: space-around;
