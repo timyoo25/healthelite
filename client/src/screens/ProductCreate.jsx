@@ -72,7 +72,7 @@ export default function ProductCreate({ handleCreateProduct, categoryList }) {
             <option disabled value='default'>
               -- Select a Category --
             </option>
-            {categoryList.map(category => (
+            {categoryList?.map(category => (
               <option key={category.id} value={category.id}>{category.name}</option>
               ))}
           </select>

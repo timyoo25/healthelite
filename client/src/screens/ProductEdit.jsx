@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom"
 
 import './css/ProductEdit.css'
 
-export default function ProductEdit({productList, handleUpdateProduct}) {
+export default function ProductEdit({productList, handleUpdateProduct, categoryList}) {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
-    img_url: ''
+    img_url: '',
+    category_id: ''
   })
-  const { name, description, img_url } = formData
+  const { name, description, img_url, category_id } = formData
   const { id } = useParams()
 
   useEffect(() => {
@@ -74,6 +75,20 @@ export default function ProductEdit({productList, handleUpdateProduct}) {
               onChange={handleChange}
               />
           </label>
+        </div>
+        <div className='product-edit-select-category'>
+          <select  className='select-category'
+            name='category_id'
+            onChange={handleChange}
+            defaultValue='default'
+            >
+            <option disabled value='default'>
+              -- Select a Category --
+            </option>
+            {categoryList?.map(category => (
+              <option key={category.id} value={category.id}>{category.name}</option>
+              ))}
+          </select>
         </div>
         <button className='product-edit-submit'>Submit</button>
       </form>
