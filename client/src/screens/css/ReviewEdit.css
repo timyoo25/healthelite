@@ -82,3 +82,9 @@
     transform: translate3d(2px, 0, 0);
   }
 }
+
+@media screen and (max-width: 375px) {
+  .review-edit-form {
+    margin: 20px;
+  }
+}
