@@ -16,7 +16,7 @@ export default function Nav({ currentUser, handleLogout}) {
             {currentUser ? (
               <div>
                 <p>{currentUser.username}</p>
-                <button onClick={handleLogout}>Logout</button>
+                <button id='logout' onClick={handleLogout}>Logout</button>
               </div>
             ) : (
               <Link id='login' to='/login'>Login/Register</Link>
