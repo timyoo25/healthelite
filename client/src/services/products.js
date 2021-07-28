@@ -23,10 +23,3 @@ export const putProduct = async (id, productData) => {
 export const deleteProduct = async (id) => {
   await api.delete(`/products/${id}`);
 };
-
-// export const Category = async (category_id, product_id) => {
-//   const res = await api.put(
-//     `/categories/${category_id}/products/${product_id}`
-//   );
-//   return res.data;
-// };

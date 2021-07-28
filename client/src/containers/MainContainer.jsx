@@ -66,7 +66,7 @@ export default function MainContainer({ currentUser }) {
   const handleDeleteProduct = async (id) => {
     await deleteProduct(id)
     setProductList(prevState => prevState.filter(product => product.id !== id))
-    history.push(`/products/${productId}`)
+    history.push('/products/')
   }
 
   const handleDeleteReview = async (productId, id) => {
