@@ -19,7 +19,8 @@ export default function ProductEdit({productList, handleUpdateProduct, categoryL
       setFormData({
         name: singleProduct.name,
         description: singleProduct.description,
-        img_url: singleProduct.img_url
+        img_url: singleProduct.img_url,
+        category_id: singleProduct.category_id
       })
     }
     if (productList.length) {
@@ -83,7 +84,7 @@ export default function ProductEdit({productList, handleUpdateProduct, categoryL
             defaultValue='default'
             >
             <option disabled value='default'>
-              -- Select a Category --
+              - Select a Category -
             </option>
             {categoryList?.map(category => (
               <option key={category.id} value={category.id}>{category.name}</option>

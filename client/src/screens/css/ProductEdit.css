@@ -72,4 +72,12 @@
   .product-edit-form {
     margin: 20px;
   }
+  .product-edit-name,
+  .product-edit-description,
+  .product-edit-image {
+    margin-top: -40px;
+  }
+  .product-edit-submit {
+    margin-top: 20px;
+  }
 }

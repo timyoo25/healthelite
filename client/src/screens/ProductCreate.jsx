@@ -70,7 +70,7 @@ export default function ProductCreate({ handleCreateProduct, categoryList }) {
             defaultValue='default'
             >
             <option disabled value='default'>
-              -- Select a Category --
+              - Select a Category -
             </option>
             {categoryList?.map(category => (
               <option key={category.id} value={category.id}>{category.name}</option>
