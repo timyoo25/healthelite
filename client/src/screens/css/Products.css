@@ -33,6 +33,11 @@
   background-color: #f1f1f2;
 }
 
+.product-create-link:hover {
+  transform: scale(1.05);
+  box-shadow: -2px 2px 10px #c87177;
+}
+
 .products-list {
   display: grid;
   grid-template-columns: repeat(3, 3fr);

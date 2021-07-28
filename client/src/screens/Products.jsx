@@ -22,7 +22,7 @@ export default function Products({ productList, currentUser }) {
       <hr className='product-line'/>
       {currentUser ?
         <div className='product-create-link-container'>
-        <Link id='create' className='product-create-link' to='/products/new'>CREATE PRODUCT</Link>
+        <Link id='create' className='product-create-link' to='/products/new'>Create Product</Link>
       </div>
       : 
       null
