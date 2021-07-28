@@ -112,3 +112,10 @@
     transform: translate3d(2px, 0, 0);
   }
 }
+
+@media screen and (max-width: 375px) {
+  .nav-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
