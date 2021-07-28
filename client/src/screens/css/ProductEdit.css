@@ -60,3 +60,10 @@
   color: #7f6f8bcf;
   padding: 3px;
 }
+
+.product-edit-submit:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: green;
+  color: black;
+}
