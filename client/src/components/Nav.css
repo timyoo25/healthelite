@@ -39,7 +39,7 @@
 }
 
 .category-links:hover {
-  animation: bounce 1s ease-in-out;
+  animation: bounce 1s;
 }
 
 @keyframes bounce {
@@ -48,18 +48,12 @@
   20%,
   50%,
   80% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
     transform: translateY(0);
   }
   40% {
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
     transform: translateY(-20px);
   }
   60% {
-    -webkit-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }
