@@ -48,3 +48,10 @@
   font-family: "Encode Sans SC", sans-serif;
   color: #7f6f8bcf;
 }
+
+.review-create-submit:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: -2px 2px 10px green;
+  color: black;
+}
