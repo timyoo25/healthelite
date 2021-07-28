@@ -22,6 +22,7 @@
   display: inline-flex;
   align-items: center;
   font-family: "Encode Sans SC", sans-serif;
+  font-size: large;
   color: #7f6f8bcf;
 }
 
@@ -52,4 +53,12 @@
 #categories:visited,
 #login:visited {
   color: #c87177;
+}
+
+#logout {
+  font-size: medium;
+  font-family: "Encode Sans SC", sans-serif;
+  color: #7f6f8bcf;
+  padding: 3px;
+  border-radius: 5px;
 }
