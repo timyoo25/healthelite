@@ -21,6 +21,7 @@
 .user-login {
   display: inline-flex;
   align-items: center;
+  font-family: "Encode Sans SC", sans-serif;
 }
 
 .category-links-parent {
