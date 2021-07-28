@@ -162,4 +162,19 @@
 }
 
 @media screen and (max-width: 375px) {
+  .reviews-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .review-detail {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: -25px;
+  }
+  .product-detail-delete {
+    margin-bottom: -20px;
+  }
+  .product-detail-name {
+    margin-top: 40px;
+  }
 }
