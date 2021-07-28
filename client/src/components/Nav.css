@@ -42,7 +42,8 @@
 }
 
 #title:link,
-#categories:link {
+#categories:link,
+#login:link {
   text-decoration: none;
   color: #c87177;
 }
