@@ -59,6 +59,13 @@
   padding: 5px;
 }
 
+.login-submit:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: green;
+  color: black;
+}
+
 .create-link-container {
   padding-top: 50px;
   font-family: "Encode Sans SC", sans-serif;
