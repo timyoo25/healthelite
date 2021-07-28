@@ -85,4 +85,9 @@
   .product-create-form {
     margin: 20px;
   }
+  .product-create-name,
+  .product-create-description,
+  .product-create-image {
+    margin-top: -20px;
+  }
 }
