@@ -160,3 +160,6 @@
   text-decoration: none;
   color: #65657c;
 }
+
+@media screen and (max-width: 375px) {
+}
