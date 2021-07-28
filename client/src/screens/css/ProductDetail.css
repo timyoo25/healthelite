@@ -69,6 +69,12 @@
   color: #65657c;
 }
 
+.product-detail-edit:hover,
+.product-detail-add-review:hover {
+  transform: scale(1.05);
+  box-shadow: -2px 2px 10px #c87177;
+}
+
 .reviews-list {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
