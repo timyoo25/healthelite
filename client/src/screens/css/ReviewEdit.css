@@ -49,3 +49,36 @@
   font-family: "Encode Sans SC", sans-serif;
   color: #7f6f8bcf;
 }
+
+.review-edit-submit:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: -2px 2px 10px green;
+  color: black;
+}
+
+.review-edit-delete:hover {
+  cursor: pointer;
+  animation: shake 0.8s;
+  background-color: red;
+  color: black;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
