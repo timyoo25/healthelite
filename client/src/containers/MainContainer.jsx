@@ -52,7 +52,7 @@ export default function MainContainer({ currentUser }) {
     setProductList((prevState) => prevState.map((product) => {
       return product.id === Number(id) ? productData : product
     }))
-    history.push('/products')
+    history.push(`/products/${id}`)
   }
 
   const handleUpdateReview = async (productId, id, formData) => {
@@ -60,13 +60,13 @@ export default function MainContainer({ currentUser }) {
     setReviewList((prevState) => prevState.map((review) => {
       return review.id === Number(id) ? reviewData : review
     }))
-    history.push(`/products/${id}`)
+    history.push(`/products/${productId}`)
   }
 
   const handleDeleteProduct = async (id) => {
     await deleteProduct(id)
     setProductList(prevState => prevState.filter(product => product.id !== id))
-    history.push('/products')
+    history.push(`/products/${productId}`)
   }
 
   const handleDeleteReview = async (productId, id) => {
